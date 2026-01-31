@@ -2,7 +2,7 @@
 
 import { Bubble } from "@typebot.io/react";
 import Link from "next/link";
-import Image from "next/image"; // Importamos el componente de imagen optimizado
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -61,9 +61,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. Casos de Éxito (Khazonli) */}
+      {/* 3. Casos de Éxito (Khazonli) - AHORA CON PREVIEW */}
       <section id="proyectos" className="max-w-5xl mx-auto px-6 mb-20">
         <div className="flex flex-col md:flex-row gap-12 items-center bg-slate-800/30 p-10 rounded-[2rem] border border-slate-700/50 backdrop-blur-sm">
+          
+          {/* Texto Izquierda */}
           <div className="w-full md:w-1/2 space-y-6">
             <div className="inline-block px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20">
               <span className="text-blue-400 font-mono text-xs tracking-widest uppercase">Proyecto Principal</span>
@@ -84,10 +86,30 @@ export default function Home() {
               </li>
             </ul>
           </div>
-          <div className="w-full md:w-1/2 bg-slate-900/80 h-72 rounded-2xl border border-slate-700 flex flex-col items-center justify-center relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-transparent"></div>
-            <span className="text-slate-500 font-mono text-sm italic">Visual: System Architecture Flow</span>
+
+          {/* Lado Derecho: La Mini Pantalla (Screenshot) */}
+          <div className="w-full md:w-1/2 relative h-72 rounded-2xl border border-slate-700 overflow-hidden group shadow-2xl">
+            {/* Imagen del Proyecto */}
+            <Image 
+              src="/khazonli-preview.jpg" 
+              alt="Khazonli Platform Preview"
+              fill
+              className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+            />
+            
+            {/* Capa de brillo al pasar el mouse */}
+            <div className="absolute inset-0 bg-blue-900/0 group-hover:bg-blue-900/20 transition duration-500"></div>
+            
+            {/* Botón flotante para visitar */}
+            <a 
+              href="https://khazonli.es" 
+              target="_blank" 
+              className="absolute bottom-4 right-4 bg-white/10 backdrop-blur-md border border-white/20 text-white px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest hover:bg-white/20 transition flex items-center gap-2"
+            >
+              Visitar Sitio ↗
+            </a>
           </div>
+
         </div>
       </section>
 
