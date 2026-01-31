@@ -132,8 +132,8 @@ export default function Home() {
         </p>
         <div className="flex gap-6 text-sm">
           <Link href="https://linkedin.com/in/robert-malave-medina-615b523a8" target="_blank" className="text-slate-400 hover:text-white transition">LinkedIn</Link>
-          <Link href="#" className="text-slate-400 hover:text-white transition">GitHub</Link>
-          <Link href="mailto:daykendesu.gaming@gmail.com" className="text-blue-400 hover:underline">Contactar</Link>
+          
+          <Link href="mailto:ING.Robert.Malave@hotmail.com" className="text-blue-400 hover:underline">Contactar</Link>
         </div>
       </footer>
 

@@ -5,8 +5,11 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Robert Malave | Khazonli Ops Engineer",
-  description: "Portafolio de Ingeniería de Operaciones, Automatización y Finanzas Digitales. Next.js, Typebot & Khazonli Ecosystem.",
+  title: "Robert Malave | Khazonli Ops",
+  description: "Portafolio de Ingeniería de Operaciones, Automatización y Estrategia Fintech.",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
