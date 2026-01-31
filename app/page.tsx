@@ -2,6 +2,7 @@
 
 import { Bubble } from "@typebot.io/react";
 import Link from "next/link";
+import Image from "next/image"; // Importamos el componente de imagen optimizado
 
 export default function Home() {
   return (
@@ -22,8 +23,23 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* 2. Hero Section */}
-      <section className="max-w-4xl mx-auto pt-24 pb-12 px-6 text-center">
+      {/* 2. Hero Section con AVATAR */}
+      <section className="max-w-4xl mx-auto pt-16 pb-12 px-6 text-center flex flex-col items-center">
+        
+        {/* Foto de Perfil */}
+        <div className="relative mb-8 group">
+          <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-emerald-600 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+          <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-[#0f172a]">
+            <Image 
+              src="/robert-profile.jpg" 
+              alt="Robert Malave - Ingeniero de Operaciones"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
+
         <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
           Optimizando Operaciones con <span className="text-blue-500">Ingeniería y Código</span>
         </h1>
@@ -31,6 +47,8 @@ export default function Home() {
           Ingeniero Industrial especializado en automatización de procesos, 
           gestión de finanzas digitales y despliegue de soluciones tech.
         </p>
+        
+        {/* Estadísticas */}
         <div className="flex justify-center gap-4 mb-20">
           <div className="bg-slate-800/40 p-4 rounded-xl border border-slate-700 w-40">
             <p className="text-blue-400 font-bold text-xl">100%</p>
@@ -73,7 +91,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. Tech Stack (RECUPERADO) */}
+      {/* 4. Tech Stack */}
       <section className="max-w-5xl mx-auto px-6 py-10">
         <h3 className="text-center text-slate-500 uppercase tracking-widest text-xs font-mono mb-10">Infraestructura Tecnológica</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -91,7 +109,7 @@ export default function Home() {
           © 2026 KHAZ ONLI Ops. Robert Malave | Ingeniero Industrial.
         </p>
         <div className="flex gap-6 text-sm">
-          <Link href="#" className="text-slate-400 hover:text-white transition">LinkedIn</Link>
+          <Link href="https://linkedin.com/in/robert-malave-medina-615b523a8" target="_blank" className="text-slate-400 hover:text-white transition">LinkedIn</Link>
           <Link href="#" className="text-slate-400 hover:text-white transition">GitHub</Link>
           <Link href="mailto:daykendesu.gaming@gmail.com" className="text-blue-400 hover:underline">Contactar</Link>
         </div>
