@@ -17,7 +17,7 @@ export default function Home() {
         </span>
         <div className="space-x-6 text-sm font-medium">
           <Link href="#proyectos" className="hover:text-blue-400 transition">Proyectos</Link>
-          <Link href="mailto:daykendesu.gaming@gmail.com" className="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition">
+          <Link href="mailto:ING.Robert.Malave@hotmail.com" className="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition">
             Contacto
           </Link>
         </div>
